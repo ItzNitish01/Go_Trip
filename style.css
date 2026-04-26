@@ -28,7 +28,6 @@ section:target {
     animation: highlight 1.5s ease-out;
 }
 
-/* Better spacing and font-weight for headers */
 h1,
 h2,
 h3 {
@@ -36,7 +35,6 @@ h3 {
     margin-bottom: 15px;
 }
 
-/* Make the small tag look like a modern "Eyebrow" heading */
 small {
     display: block;
     text-transform: uppercase;
@@ -45,7 +43,6 @@ small {
     margin-bottom: 10px;
 }
 
-/* Improve paragraph readability */
 p {
     font-family: 'Roboto', sans-serif;
     color: #506172;
@@ -106,9 +103,6 @@ ul.menu {
 .menu li {
     flex: 1;
     list-style-type: none;
-    /* font-size: 16px;
-    font-family: "Barlow Condensed";
-    text-align: center; */
 }
 
 .menu li a {
@@ -123,7 +117,6 @@ ul.menu {
 
 .menu li a:hover {
     color: #fde02f;
-    /* text-decoration: underline; */
     transform: translateY(-2px);
 }
 
@@ -155,12 +148,10 @@ ul.menu {
     bottom: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.3);
-    /* Slightly darker for better text contrast */
 }
 
 .banner-text-item {
     position: relative;
-    /* Changed from absolute for better stacking */
     z-index: 2;
     width: 90%;
     max-width: 1200px;
@@ -171,7 +162,6 @@ ul.menu {
 
 .banner-heading h1 {
     font-size: clamp(50px, 8vw, 100px);
-    /* Responsive font size */
     font-weight: normal;
     color: #fde02f;
     font-family: 'Satisfy', cursive;
@@ -190,12 +180,10 @@ ul.menu {
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     border-radius: 15px;
-    /* Rounded corners for modern feel */
     width: 100%;
     max-width: 900px;
     padding: 20px;
     gap: 15px;
-    /* Use gap instead of margins for spacing */
 }
 
 .banner-text-item input,
@@ -208,13 +196,11 @@ ul.menu {
     border: 1px solid rgba(255, 255, 255, 0.3);
     background: white;
     flex: 2;
-    /* Takes more space */
     min-width: 200px;
 }
 
 .banner-text-item .date {
     flex: 1;
-    /* Takes less space than search */
     min-width: 150px;
 }
 
@@ -241,7 +227,6 @@ ul.menu {
     transform: scale(1.05);
 }
 
-/* Fix for mobile responsiveness on the form */
 @media (max-width: 768px) {
     .banner-text-item .form {
         flex-direction: column;
@@ -260,14 +245,11 @@ ul.menu {
 .services {
     display: flex;
     flex-wrap: wrap;
-    /* Allows boxes to move to next line if no space */
     justify-content: center;
     align-items: stretch;
     gap: 25px;
-    /* This handles all spacing perfectly */
     max-width: 1200px;
     margin: 80px auto;
-    /* Proper top/bottom spacing */
     padding: 60px;
 }
 
@@ -278,17 +260,13 @@ ul.menu {
     padding: 40px 20px;
     text-align: center;
     flex: 1 1 250px;
-    /* Allows growth, but sets a base width of 250px */
     max-width: 280px;
-    /* Keeps them from getting too wide */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: all 0.4s ease;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-
-    /* REMOVE ANY MARGINS HERE */
     margin: 0 !important;
 }
 
@@ -311,7 +289,6 @@ ul.menu {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Fix - Clean and Simple */
 @media screen and (max-width: 768px) {
     .services {
         flex-direction: column;
@@ -353,7 +330,6 @@ ul.menu {
 
 .cards {
     display: grid;
-    /* This creates a responsive grid that wraps automatically */
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 30px;
     padding: 20px;
@@ -365,7 +341,6 @@ ul.menu {
     border: 1px solid #eee;
     border-radius: 12px;
     overflow: hidden;
-    /* Keeps zoom-img inside the rounded corners */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
     width: 100%;
@@ -381,7 +356,6 @@ ul.menu {
     width: 100%;
     height: 300px;
     object-fit: cover;
-    /* Keeps aspect ratio perfect */
     transition: transform 0.8s ease;
 }
 
@@ -392,7 +366,6 @@ ul.menu {
 .cards .text {
     padding: 25px;
     text-align: left;
-    /* Aligned left for a cleaner look */
 }
 
 .cards .text h2 {
@@ -413,20 +386,16 @@ ul.menu {
 .cards .card-box {
     display: flex;
     flex-flow: row wrap;
-    /* Allows text to drop to a new line if it's too long */
     background-color: #fde02f;
     padding: 10px 15px;
     border-radius: 8px;
     font-size: 14px;
-    /* Slightly smaller font for better fit */
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     align-items: center;
-    /* Vertically centers the icons with text */
     justify-content: space-between;
     gap: 10px;
     min-height: 45px;
-    /* Ensures a consistent look without cutting off text */
 }
 
 .cards .time,
@@ -435,16 +404,12 @@ ul.menu {
     display: flex;
     align-items: center;
     gap: 5px;
-    /* Space between the icon and the text */
     white-space: nowrap;
-    /* Prevents text from breaking mid-word */
 }
 
-/* If the location is still too long, this allows it to wrap properly */
 .cards .location {
     flex: 1.5;
     white-space: normal;
-    /* Allows wrapping for long city names */
     line-height: 1.2;
 }
 
@@ -456,7 +421,6 @@ ul.menu {
     overflow: hidden;
 }
 
-/* Fixed the gradient overlay */
 .zoom-img::after {
     content: "";
     position: absolute;
@@ -464,7 +428,6 @@ ul.menu {
     left: 0;
     width: 100%;
     height: 60%;
-    /* Gradient fade for professional look */
     background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
     opacity: 0;
     transition: opacity 0.4s ease;
@@ -475,7 +438,6 @@ ul.menu {
     opacity: 1;
 }
 
-/* Responsive Overrides (Cleaning up old logic) */
 @media screen and (max-width: 974px) {
     .cards {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -492,7 +454,6 @@ ul.menu {
     margin: 100px auto;
     padding: 0 20px;
     gap: 60px;
-    /* Space between image and text */
 }
 
 .about-img {
@@ -506,7 +467,6 @@ ul.menu {
     height: auto;
     border-radius: 15px;
     box-shadow: 20px 20px 0px #fde02f;
-    /* Modern offset background shadow */
 }
 
 .about-text {
@@ -531,7 +491,6 @@ ul.menu {
 
 b {
     color: #014b85;
-    /* Highlighting "Go Trip" in the about section */
 }
 
 .about-text p {
@@ -540,7 +499,6 @@ b {
     margin-bottom: 25px;
 }
 
-/* Checklist Styling */
 .about-checklist p {
     margin-bottom: 12px;
     display: flex;
@@ -576,7 +534,6 @@ b {
     transform: scale(1.05);
 }
 
-/* Responsive Fix */
 @media (max-width: 942px) {
     .about {
         flex-direction: column;
@@ -591,7 +548,6 @@ b {
     .about-img img {
         box-shadow: 10px 10px 0px #fde02f;
         object-fit: cover;
-        /* Smaller shadow on mobile */
     }
 }
 
@@ -614,7 +570,6 @@ b {
     position: absolute;
     content: "";
     background-color: rgba(0, 0, 36, 0.85);
-    /* Dark overlay for text readability */
     top: 0;
     left: 0;
     bottom: 0;
@@ -644,7 +599,6 @@ b {
     font-size: 24px;
     margin-bottom: 25px;
     color: #fde02f;
-    /* Using theme yellow for headers */
 }
 
 .links ul {
@@ -663,7 +617,6 @@ b {
 .links li:hover {
     color: #fde02f;
     padding-left: 5px;
-    /* Subtle slide effect on hover */
 }
 
 .social-icons {
@@ -702,7 +655,6 @@ b {
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* Responsive Footer */
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
@@ -800,19 +752,12 @@ b {
         flex-flow: column wrap;
     }
 
-    /* .services .service-item {
-        flex: 1;
-        margin-bottom: -130px;
-        width: 400px;
-    } */
-
     .places-text {
         margin-top: 20px;
     }
 }
 
 @media all and (max-width: 928px) {
-
     .banner .form input,
     a {
         font-size: 12px;
