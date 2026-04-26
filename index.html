@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Go Trip</title>
+</head>
+
+<body>
+
+    <!--===========Nav Bar=================-->
+    <section class="nav-bar">
+        <div class="logo">Go Trip</div>
+        <ul class="menu">
+            <li><a href="#home">home</a></li>
+            <li><a href="#services">services</a></li>
+            <li><a href="#places">Packages</a></li>
+            <!-- <li><a href="#blog">blog</a></li> -->
+            <li><a href="#about">about us</a></li>
+            <li><a href="#footer">contact us</a></li>
+        </ul>
+    </section>
+    <!--===============Banner================-->
+    <section id="home" class="banner">
+        <div class="banner-text-item">
+            <div class="banner-heading">
+                <h1>Find your Next tour!</h1>
+            </div>
+            <form class="form">
+                <input type="text" list="mylist" placeholder="Where would you like to go?" title="Select Place">
+                <datalist id="mylist">
+                    <option>London</option>
+                    <option>Canada</option>
+                    <option>Monaco</option>
+                    <option>France</option>
+                    <option>Japan</option>
+                    <option>Switzerland</option>
+                    <option>Seoul</option>
+                </datalist>
+                <input type="date" class="date" placeholder="Select Date" title="Select Date">
+                <a href="#" class="book" title="Book Now">book now</a>
+            </form>
+        </div>
+    </section>
+
+    <!--=========Services===============-->
+    <section id="services" class="services">
+        <div class="service-item">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <h2>8000+ Our Local Guides</h2>
+        </div>
+        <div class="service-item">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h2>100% Trusted Tour Agency</h2>
+        </div>
+        <div class="service-item">
+            <i class="fa-solid fa-calendar-check"></i>
+            <h2>20+ Years of Travel Experience</h2>
+        </div>
+        <div class="service-item">
+            <i class="fa-solid fa-face-smile"></i>
+            <h2>99% Our Travelers are Happy</h2>
+        </div>
+    </section>
+
+    <!--==============Places===================-->
+    <section id="places" class="places">
+        <div class="places-text">
+            <small>FEATURED TOURS PACKAGES</small>
+            <h2>Favourite Places</h2>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <div class="zoom-img">
+                    <div class="img-card">
+                        <img src="https://static.toiimg.com/photo/46688928/.jpg" alt="Vancouver">
+                    </div>
+                </div>
+
+                <div class="text">
+                    <span class="rating">⭐⭐⭐⭐⭐</span>
+                    <h2>Vancouver</h2>
+                    <p class="cost">$1999 / Per Person</p>
+                    <div class="card-box">
+                        <p class="time">🕓 3 Days</p>
+                        <p class="location">✈ Vancouver, Canada</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="zoom-img">
+                    <div class="img-card">
+                        <img
+                            src="https://c4.wallpaperflare.com/wallpaper/1014/843/831/4k-eiffel-tower-france-8k-wallpaper-preview.jpg" alt="Paris">
+                    </div>
+                </div>
+
+                <div class="text">
+                    <span class="rating">⭐⭐⭐⭐⭐</span>
+                    <h2>Paris</h2>
+                    <p class="cost">$1999 / Per Person</p>
+                    <div class="card-box">
+                        <p class="time">🕓 3 Days</p>
+                        <p class="location">✈ Paris, France</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="zoom-img">
+                    <div class="img-card">
+                        <img
+                            src="https://i.ytimg.com/vi/Zxjk54-lT3Q/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAz_zrT6-D2iQ12ivVISqqYc1FQXw" alt="Monaco">
+                    </div>
+                </div>
+
+                <div class="text">
+                    <span class="rating">⭐⭐⭐⭐⭐</span>
+                    <h2>Monaco</h2>
+                    <p class="cost">$1999 / Per Person</p>
+                    <div class="card-box">
+                        <p class="time">🕓 3 Days</p>
+                        <p class="location">✈ Monaco, Monaco</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="zoom-img">
+                    <div class="img-card">
+                        <img src="https://swiss.city-tourist.de/assets/images/bern-sehenswuerdigkeit-2.jpg" alt="Bern">
+                    </div>
+                </div>
+
+                <div class="text">
+                    <span class="rating">⭐⭐⭐⭐⭐</span>
+                    <h2>Bern</h2>
+                    <p class="cost">$1999 / Per Person</p>
+                    <div class="card-box">
+                        <p class="time">🕓 3 Days</p>
+                        <p class="location">✈ Bern, Switzerland</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="zoom-img">
+                    <div class="img-card">
+                        <img
+                            src="https://media.istockphoto.com/id/521707831/photo/seoul-south-korea-skyline.jpg?s=612x612&w=0&k=20&c=Zlxokjq-Yf_lkGDDReM4SlOXvCebTpFBxZ6b2-MknW8=" alt="Seoul">
+                    </div>
+                </div>
+
+                <div class="text">
+                    <span class="rating">⭐⭐⭐⭐⭐</span>
+                    <h2>Seoul</h2>
+                    <p class="cost">$1999 / Per Person</p>
+                    <div class="card-box">
+                        <p class="time">🕓 3 Days</p>
+                        <p class="location">✈ Seoul, South Korea</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="zoom-img">
+                    <div class="img-card">
+                        <img
+                            src="https://cdn.kimkim.com/files/a/images/0a3526e83f8930a173c9903163366dc69959df3c/big-eaf2bcc3d4703527124f76dde205b5ec.jpg" alt="Tokyo">
+                    </div>
+                </div>
+
+                <div class="text">
+                    <span class="rating">⭐⭐⭐⭐⭐</span>
+                    <h2>Tokyo</h2>
+                    <p class="cost">$1999 / Per Person</p>
+                    <div class="card-box">
+                        <p class="time">🕓 3 Days</p>
+                        <p class="location">✈ Tokyo, Japan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--===========About Us===============-->
+    <section id="about" class="about">
+        <div class="about-img">
+            <img src="https://cdn.pixabay.com/photo/2020/05/15/14/10/outdoor-5173719_960_720.jpg" alt="About Us">
+        </div>
+        <div class="about-text">
+            <small>ABOUT OUR COMPANY</small>
+            <h2>We are <b>Go Trip</b>: Your Global Compass for Unforgettable Adventures</h2>
+            <p>Traveling isn't just about visiting a place; it's about the stories you bring back. At Go Trip, we specialize in
+            crafting personalized journeys that take you beyond the tourist trails. Whether you’re looking for a peaceful mountain
+            retreat or a fast-paced city escape, our team ensures every detail is handled with care.</p>
+    
+            <div class="about-checklist">
+                <p><i class="fa-solid fa-circle-check"></i> Expert Local Guides</p>
+                <p><i class="fa-solid fa-circle-check"></i> 24/7 Customer Support</p>
+                <p><i class="fa-solid fa-circle-check"></i> Personalized Travel Itineraries</p>
+                <p><i class="fa-solid fa-circle-check"></i> Flexible Booking & Easy Cancellations</p>
+                <p><i class="fa-solid fa-circle-check"></i> Exclusive Deals and Premium Packages</p>
+            </div>
+    
+            <a href="#places" class="about-btn" title="Explore Tours">EXPLORE TOURS</a>
+        </div>
+    </section>
+
+    <!--===========Footer=================-->
+    <footer id="footer" class="footer">
+        <div class="footer-container">
+            <div class="links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li>Offers & Discounts</li>
+                    <li>Get Coupon</li>
+                    <li>Contact Us</li>
+                    <li>About</li>
+                </ul>
+            </div>
+            <div class="links">
+                <h3>New Products</h3>
+                <ul>
+                    <li>Woman Cloth</li>
+                    <li>Fashion Accessories</li>
+                    <li>Man Accessories</li>
+                    <li>Rubber made Toys</li>
+                </ul>
+            </div>
+            <div class="links">
+                <h3>Support</h3>
+                <ul>
+                    <li>Frequently Asked Questions</li>
+                    <li>Report a Payment Issue</li>
+                    <li>Terms & Conditions</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+            <div class="links">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/" title="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com/" title="Twitter" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.youtube.com/" title="YouTube" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Go Trip. All rights reserved | Designed by Nitish</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
