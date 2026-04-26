@@ -1,3 +1,4 @@
+/*==================== 1. MAIN & GLOBAL RESET ====================*/
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
@@ -11,21 +12,6 @@ body,
 html {
     margin: 0;
     padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-}
-
-section {
-    scroll-margin-top: 90px;
-}
-
-section:target {
-    border-left: 8px solid #fde02f;
-    padding-left: 20px;
-    animation: highlight 1.5s ease-out;
 }
 
 h1,
@@ -49,7 +35,37 @@ p {
     line-height: 1.6;
 }
 
-/*------------------------Scroll Bar-----------------------*/
+b {
+    color: #014b85;
+}
+
+/*==================== 2. SCROLL & TARGET LOGIC ====================*/
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+section:target {
+    border-left: 8px solid #fde02f;
+    padding-left: 20px;
+    animation: highlight 1.5s ease-out;
+}
+
+@keyframes highlight {
+    0% {
+        background-color: rgba(253, 224, 47, 0.2);
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
+
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 20px;
 }
@@ -68,13 +84,13 @@ p {
     background-color: #fde02f;
 }
 
-/*========================Nav Bar=========================*/
+/*==================== 3. NAV BAR ====================*/
 .nav-bar {
     display: flex;
     flex-flow: row wrap;
     width: 100%;
     height: 90px;
-    background-color: rgba(6, 49, 180, 0.3);
+    background-color: rgba(114, 202, 253, 0.3);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
@@ -122,11 +138,72 @@ ul.menu {
 }
 
 @keyframes highlight {
-    0% { background-color: rgba(253, 224, 47, 0.2); }
-    100% { background-color: transparent; }
+    0% {
+        background-color: rgba(253, 224, 47, 0.2);
+    }
+
+    100% {
+        background-color: transparent;
+    }
 }
 
-/*=============================Banner=============================*/
+@media (max-width: 942px) {
+    .nav-bar {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        position: static;
+    }
+
+    .logo {
+        flex: 1;
+        font-size: 30px;
+        margin: 10px auto;
+        font-family: Satisfy;
+        color: #fde02f;
+    }
+
+    .nav-bar ul {
+        display: none;
+    }
+
+    .nav-bar ul li {
+        flex: 1;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-bar {
+        height: auto;
+        padding: 15px 0;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    ul.menu {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .menu li {
+        flex: none;
+        margin: 0 5px;
+    }
+
+    .menu li a {
+        font-size: 14px;
+    }
+}
+
+/*==================== 4. BANNER ====================*/
 .banner {
     background-image: url("https://wallpapercave.com/wp/wp4871144.jpg");
     background-size: cover;
@@ -228,21 +305,96 @@ ul.menu {
     transform: scale(1.05);
 }
 
+@media all and (max-width: 1414px) {
+    .banner-text-item .form input {
+        width: 40%;
+    }
+
+    .banner-text-item .form .date {
+        width: 30%;
+    }
+
+    .banner-text-item .form .book {
+        width: 20%;
+        font-size: 14px;
+    }
+}
+
+@media all and (max-width: 1173px) {
+    .banner .form {
+        background-color: transparent;
+    }
+}
+
+@media all and (max-width: 1172px) {
+    .banner-text-item .form {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+
+    .banner-text-item .form input,
+    .banner-text-item .form .date,
+    .banner-text-item .form a {
+        flex: 1;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+
+    .banner-text-item .form input {
+        width: 60%;
+    }
+
+    .banner-text-item .form .date {
+        width: 30%;
+    }
+
+    .banner-text-item .form .book {
+        width: 10%;
+        font-size: 14px;
+    }
+
+    .banner-heading h1 {
+        font-size: 60px;
+    }
+}
+
+@media all and (max-width: 928px) {
+    .banner .form input,
+    a {
+        font-size: 12px;
+    }
+}
+
 @media (max-width: 768px) {
     .banner-text-item .form {
         flex-direction: column;
-        width: 90%;
+        width: 50%;
     }
 
     .banner-text-item input,
     .banner-text-item .date,
     .banner-text-item .book {
-        width: 100%;
+        width: 60%;
         flex: none;
     }
 }
 
-/*===========================Services Final===========================*/
+@media (max-width: 480px) {
+    .banner-heading h1 {
+        font-size: 40px;
+        padding: 0 10px;
+    }
+
+    .banner-text-item .form {
+        padding: 15px;
+        width: 70%;
+    }
+}
+
+/*==================== 5. SERVICES ====================*/
 .services {
     display: flex;
     flex-wrap: wrap;
@@ -290,6 +442,18 @@ ul.menu {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
+@media all and (max-width: 942px) {
+    .services {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    .service-item {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .services {
         flex-direction: column;
@@ -302,7 +466,7 @@ ul.menu {
     }
 }
 
-/*=============================Places Section===============================*/
+/*==================== 6. PLACES & CARDS ====================*/
 .places {
     padding: 10px 0;
     max-width: 1200px;
@@ -414,7 +578,6 @@ ul.menu {
     line-height: 1.2;
 }
 
-/*------------Zoom in Photos with Overlay--------------*/
 .zoom-img {
     position: relative;
     width: 100%;
@@ -439,13 +602,53 @@ ul.menu {
     opacity: 1;
 }
 
-@media screen and (max-width: 974px) {
-    .cards {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+@media all and (max-width: 1194px) {
+    .places .card-box p {
+        font-size: 14px;
     }
 }
 
-/*=========================About Us Section=========================*/
+@media all and (max-width: 1086px) {
+    .places .cards .text {
+        line-height: 40px;
+    }
+
+    .cards .text .h2 {
+        font-size: 12px;
+    }
+
+    .cards .img-card img {
+        height: 260px;
+    }
+}
+
+@media screen and (max-width: 974px) {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-gap: 20px;
+    }
+
+    .card {
+        width: 300px;
+        height: 500px;
+        margin: auto;
+    }
+
+    .cards .text {
+        padding: 5px;
+        font-family: Barlow Condensed;
+    }
+}
+
+@media (max-width: 942px) {
+    .places-text {
+        margin-top: 20px;
+    }
+}
+
+/*==================== 7. ABOUT US ====================*/
 .about {
     display: flex;
     flex-flow: row wrap;
@@ -459,7 +662,10 @@ ul.menu {
 
 .about-img {
     flex: 1;
-    min-width: 300px;
+    width: 100%;
+    min-width: unset;
+    display: flex;
+    justify-content: center;
 }
 
 .about-img img {
@@ -467,7 +673,8 @@ ul.menu {
     max-width: 500px;
     height: auto;
     border-radius: 15px;
-    box-shadow: 20px 20px 0px #fde02f;
+    object-fit: cover;
+    box-shadow: 15px 15px 0px #fde02f;
 }
 
 .about-text {
@@ -546,6 +753,46 @@ b {
     transform: scale(1.05);
 }
 
+@media all and (max-width: 1334px) {
+    .about-img img {
+        width: 300px;
+        height: 500px;
+    }
+}
+
+@media all and (max-width: 1116px) {
+    .about {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-img {
+        flex: 1;
+        margin-bottom: 20px;
+    }
+
+    .about-text {
+        flex: 1;
+        margin: auto;
+        text-align: center;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-text h2 {
+        font-size: 35px;
+    }
+
+    .about-img img {
+        width: 400px;
+        height: 400px;
+    }
+}
+
 @media (max-width: 942px) {
     .about {
         flex-direction: column;
@@ -568,12 +815,20 @@ b {
         text-align: center;
         padding: 10px;
     }
+
     .about-checklist p {
         justify-content: flex-start;
     }
 }
 
-/*===============Footer Final===================*/
+@media (max-width: 480px) {
+    .about-img img {
+        box-shadow: 10px 10px 0px #fde02f;
+        width: 90%;
+    }
+}
+
+/*==================== 8. FOOTER ====================*/
 .footer {
     background-image: url("https://images6.alphacoders.com/108/thumb-1920-1083694.jpg");
     background-size: cover;
@@ -697,190 +952,5 @@ b {
 
     .social-icons {
         justify-content: center;
-    }
-}
-
-/*==========================Responsive=============================*/
-@media all and (max-width: 1172px) {
-    .banner-text-item .form {
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-    }
-
-    .banner-text-item .form input,
-    .banner-text-item .form .date,
-    .banner-text-item .form a {
-        flex: 1;
-        margin-bottom: 5px;
-        font-size: 14px;
-    }
-
-    .banner-text-item .form input {
-        width: 60%;
-    }
-
-    .banner-text-item .form .date {
-        width: 30%;
-    }
-
-    .banner-text-item .form .book {
-        width: 10%;
-        font-size: 14px;
-    }
-
-    .banner-heading h1 {
-        font-size: 60px;
-    }
-}
-
-@media all and (max-width: 1414px) {
-    .banner-text-item .form input {
-        width: 40%;
-    }
-
-    .banner-text-item .form .date {
-        width: 30%;
-    }
-
-    .banner-text-item .form .book {
-        width: 20%;
-        font-size: 14px;
-    }
-}
-
-@media all and (max-width: 942px) {
-    .nav-bar {
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: auto;
-        text-align: center;
-        position: static;
-    }
-
-    .logo {
-        flex: 1;
-        font-size: 30px;
-        margin: 10px auto;
-        font-family: Satisfy;
-        color: #fde02f;
-    }
-
-    .nav-bar ul {
-        display: none;
-    }
-
-    .nav-bar ul li {
-        flex: 1;
-        margin-bottom: 5px;
-        font-size: 14px;
-    }
-
-    .services {
-        display: flex;
-        flex-flow: column wrap;
-    }
-
-    .places-text {
-        margin-top: 20px;
-    }
-}
-
-@media all and (max-width: 928px) {
-
-    .banner .form input,
-    a {
-        font-size: 12px;
-    }
-}
-
-@media all and (max-width: 1173px) {
-    .banner .form {
-        background-color: transparent;
-    }
-}
-
-@media all and (max-width: 1194px) {
-    .places .card-box p {
-        font-size: 14px;
-    }
-}
-
-@media all and (max-width: 1086px) {
-    .places .cards .text {
-        line-height: 40px;
-    }
-
-    .cards .text .h2 {
-        font-size: 12px;
-    }
-
-    .cards .img-card img {
-        height: 260px;
-    }
-}
-
-@media all and (max-width: 974px) {
-    .cards {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-        grid-gap: 20px;
-    }
-
-    .card {
-        width: 300px;
-        height: 500px;
-        margin: auto;
-    }
-
-    .cards .text {
-        padding: 5px;
-        font-family: Barlow Condensed;
-    }
-}
-
-@media all and (max-width: 1334px) {
-    .about-img img {
-        width: 300px;
-        height: 500px;
-    }
-}
-
-@media all and (max-width: 1116px) {
-    .about {
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .about-img {
-        flex: 1;
-        margin-bottom: 20px;
-    }
-
-    .about-text {
-        flex: 1;
-        margin: auto;
-        text-align: center;
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .about-text h2 {
-        font-size: 35px;
-    }
-
-    .about-img img {
-        width: 400px;
-        height: 400px;
     }
 }
