@@ -954,3 +954,65 @@ b {
         justify-content: center;
     }
 }
+
+/*==================== Final Micro-Screen Fix (JioPhone/Small Devices) ====================*/
+@media screen and (max-width: 320px) {
+    body, html {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .logo {
+        font-size: 24px;
+        padding: 10px;
+    }
+    
+    ul.menu li a {
+        font-size: 11px;
+        margin: 0 2px;
+    }
+
+    .banner-heading h1 {
+        font-size: 28px !important;
+        line-height: 1.2;
+    }
+
+    .banner-text-item .form {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .banner-text-item input, 
+    .banner-text-item .date, 
+    .banner-text-item .book {
+        font-size: 13px;
+        padding: 10px;
+        min-width: 100%;
+    }
+
+    .places-text h2 {
+        font-size: 32px !important;
+    }
+    
+    .places-text small {
+        font-size: 10px;
+    }
+
+    .cards {
+        padding: 10px;
+    }
+
+    .card {
+        width: 100% !important;
+        max-width: 220px;
+    }
+
+    .cards .text h2 {
+        font-size: 20px;
+    }
+
+    .cards .card-box {
+        font-size: 11px;
+        padding: 8px;
+    }
+}
