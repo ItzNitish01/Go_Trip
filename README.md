@@ -3,7 +3,7 @@
 A sleek, responsive, and visually engaging landing page for a travel agency built using **Pure HTML5 and CSS3**. This project focuses on modern UI trends like Glassmorphism, CSS Grid, and Flexbox layouts.
 
 ## 🚀 Demo
-[View Live Demo](https://ItzNitish01.github.io/Go-Trip/)
+**[Click here to view the live project](https://ItzNitish01.github.io/Go-Trip/)**
 
 ## ✨ Key Features
 * **Modern UI Design:** Implements Glassmorphism in the banner search form and sticky navigation.
